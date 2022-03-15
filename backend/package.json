@@ -4,6 +4,7 @@
   "description": "JSON server to provide a fake API to IKEA frontend",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "npm jest --watchAll --collect-coverage"
   },
   "author": "shd8",
@@ -12,5 +13,13 @@
     "eslint": "^8.11.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jest": "^27.5.1",
+    "json-server": "^0.17.0",
+    "nodemon": "^2.0.15"
   }
 }
