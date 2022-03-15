@@ -6,14 +6,14 @@ const {
   GET_AD,
 } = actionTypes;
 
-const initialState = { ads: [], currentAd: {} };
+const initialState = { all: [], currentAd: {} };
 
 const adsReducer = (state = initialState, { type, payload }) => {
   const result = { ...state };
 
   switch (type) {
     case GET_ALL_ADS:
-      result.ads = payload;
+      result.all = payload;
       break;
 
     case GET_AD:
