@@ -1,7 +1,104 @@
 {
     "ads": [
         {
-            "length": 10
+            "id": 0,
+            "image": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/food-delivery-advertisement-design-template-cfd149289a4f241f8bbde6277ac6960c_screen.jpg?ts=1622237544",
+            "external": "url",
+            "rating": 6,
+            "title": "Hamburguer",
+            "description": "Eat hamburguer",
+            "price": 2.99,
+            "category": "food"
+        },
+        {
+            "id": 1,
+            "image": "https://m.media-amazon.com/images/I/71WMHPfSinL._AC_SX425_.jpg",
+            "rating": 7,
+            "external": "",
+            "title": "Coca cola",
+            "description": "Drink coca cola",
+            "price": 6.99,
+            "category": "food"
+        },
+        {
+            "id": 2,
+            "image": "https://literacyideas.com/wp-content/uploads/2021/08/1_img_6107cb72d2d9b.jpg",
+            "rating": 8,
+            "external": "",
+            "title": "Diet coke",
+            "description": "Drink diet coke",
+            "price": 9.99,
+            "category": "food"
+        },
+        {
+            "id": 3,
+            "image": "https://gurulocity.com/wp-content/uploads/2016/10/2016-Colgate-Print-Advertisement-Featured-Image.jpg",
+            "rating": 9,
+            "external": "",
+            "title": "Colgate",
+            "description": "Smile your strength",
+            "price": 13.99,
+            "category": "health"
+        },
+        {
+            "id": 4,
+            "image": "https://cdn5.vectorstock.com/i/1000x1000/03/49/strawberry-ice-cream-advertisement-vector-21520349.jpg",
+            "rating": 9,
+            "external": "",
+            "title": "Ice cream",
+            "description": "Eat ice cream",
+            "price": 6.99,
+            "category": "food"
+        },
+        {
+            "id": 5,
+            "image": "https://media.baamboozle.com/uploads/images/426474/1634178204_38741_url.jpeg",
+            "rating": 10,
+            "external": "",
+            "title": "Snikkers",
+            "description": "Eat snikkers",
+            "price": 2.99,
+            "category": "food"
+        },
+        {
+            "id": 6,
+            "image": "https://149350408.v2.pressablecdn.com/wp-content/uploads/2017/06/doug-zuba-98852.jpg",
+            "rating": 5,
+            "external": "",
+            "title": "Nike",
+            "description": "Wear Nike",
+            "price": 39.99,
+            "category": "clothing"
+        },
+        {
+            "id": 7,
+            "image": "https://www.delcampe.net/static/img_large/auction/000/314/224/867_001.jpg?v=1",
+            "rating": 9.99,
+            "external": "",
+            "title": "Pantene",
+            "description": "Strength your hair",
+            "price": 9.99,
+            "category": "health"
+        },
+        {
+            "id": 8,
+            "image": "https://cdn.dribbble.com/users/2688334/screenshots/6636843/be707f81337547.5cfcdfc44087b.jpg",
+            "rating": 4,
+            "external": "",
+            "title": "Honda or Big Mac",
+            "description": "Buy a Honda or a Big Mac",
+            "price": 19999.99,
+            "category": ["cars", "food"]
+        },
+        {
+            "id": 9,
+            "image": "https://i.pinimg.com/originals/dc/bc/f1/dcbcf10bba0535c17e6cb8c3a9dd32fb.jpg",
+            "rating": 10,
+            "external": "",
+            "title": "A is for Apple",
+            "description": "Buy a M1 chip",
+            "price": 1999.99,
+            "category": "technology"
         }
     ]
 }
