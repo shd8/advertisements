@@ -1,0 +1,16 @@
+{
+  "name": "json-server",
+  "version": "1.0.0",
+  "description": "JSON server to provide a fake API to IKEA frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm jest --watchAll --collect-coverage"
+  },
+  "author": "shd8",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}
