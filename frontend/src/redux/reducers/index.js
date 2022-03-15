@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux';
-
-const testReducer = (state = {}) => ({ ...state, fer: 'lo peta' });
+import adsReducer from './adsReducer';
 
 const rootReducer = combineReducers({
-  testReducer,
+  ads: adsReducer,
 });
 
 export default rootReducer;
