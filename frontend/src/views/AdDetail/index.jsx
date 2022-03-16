@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { CircularProgress } from '@mui/material';
-import { getAd } from '../../redux/actions/actions';
+import { getAd, voidCurrentAd } from '../../redux/actions/actions';
 import timestampToDate from '../../utils/time';
 import './styles.scss';
 
@@ -14,6 +14,7 @@ const AdDetail = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
+    dispatch(voidCurrentAd());
     setTimeout(() => dispatch(getAd(adId)), 1000);
   }, []);
 
@@ -31,7 +32,7 @@ const AdDetail = () => {
                 alt={currentAd.description}
                 srcSet=""
                 loading="lazy"
-                className="detail__image"
+                className={`detail__image ${!imageLoaded ? 'loading' : ''}`}
                 onLoad={() => setImageLoaded(true)}
               />
               <p>
