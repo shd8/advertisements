@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   CircularProgress, Button, IconButton, Box, Modal, Typography,
 } from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
+import HomeIcon from '@mui/icons-material/Home';
 import Rating from '../../components/Rating';
 import { getAd, voidCurrentAd } from '../../redux/actions/actions';
 import timestampToDate from '../../utils/time';
@@ -44,7 +45,18 @@ const AdDetail = () => {
           ? <CircularProgress size={75} className="detail__loading" />
           : (
             <>
-              <small className="detail__category">{ currentAd.category }</small>
+              <div className="details__header">
+                <Link to="/">
+                  <IconButton
+                    sx={{ color: 'rgba(0, 0, 0, 0.54)' }}
+                    aria-label="Home"
+                    className="details__home"
+                  >
+                    <HomeIcon sx={{ fontSize: 40 }} />
+                  </IconButton>
+                </Link>
+                <small className="detail__category">{ currentAd.category }</small>
+              </div>
               <h1>{currentAd.title}</h1>
               <div className="details">
 

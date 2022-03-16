@@ -9,7 +9,7 @@ const AdList = ({ ads = [] }) => (
     variant="masonry"
     cols={2}
     gap={10}
-    sx={{ margin: '0em 2em' }}
+    sx={{ margin: '0em 2em', textAlign: 'center' }}
   >
     { ads.length > 0 && ads.map(({
       id,
