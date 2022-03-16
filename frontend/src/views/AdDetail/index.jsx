@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { CircularProgress } from '@mui/material';
 import { getAd } from '../../redux/actions/actions';
 import timestampToDate from '../../utils/time';
+import './styles.scss';
 
 const AdDetail = () => {
   const { adId } = useParams();
@@ -17,10 +18,10 @@ const AdDetail = () => {
   }, []);
 
   return (
-    <div>
+    <div className="detail">
       {
         loading
-          ? <CircularProgress size={75} className="dashboard__loading" />
+          ? <CircularProgress size={75} className="detail__loading" />
           : (
             <>
               <h1>{currentAd.title}</h1>

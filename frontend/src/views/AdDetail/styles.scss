@@ -1,9 +1,9 @@
-.dashboard {
+.detail {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     &__loading {
-        margin: 15em 0em;
+        margin: 20em 0em;
     }
 }
