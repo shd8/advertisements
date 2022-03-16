@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable import/extensions */
+/* eslint-disable camelcase */
 import React from 'react';
 import { ImageList } from '@mui/material';
 import Ad from '../Ad';
@@ -16,7 +15,7 @@ const AdList = ({ ads = [] }) => (
       description,
       price,
       category,
-      validUntil,
+      valid_until,
     }) => (
       <Ad
         key={id}
@@ -28,7 +27,7 @@ const AdList = ({ ads = [] }) => (
         description={description}
         price={price}
         category={category}
-        validUntil={validUntil}
+        validUntil={valid_until}
       />
     ))}
   </ImageList>

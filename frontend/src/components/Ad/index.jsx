@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { ImageListItem } from '@mui/material';
+import { IconButton, ImageListItem, ImageListItemBar } from '@mui/material';
+import CallMadeIcon from '@mui/icons-material/CallMade';
 
 const Ad = ({
   id,
@@ -19,6 +20,26 @@ const Ad = ({
       alt={description}
       srcSet={image}
       loading="lazy"
+    />
+    <ImageListItemBar
+      title={title}
+      sx={{ background: 'rgba(0, 0, 0, 0.65)' }}
+      subtitle={`Valid until: ${validUntil}`}
+      actionIcon={(
+        <IconButton
+          sx={[
+            { color: 'rgba(255, 255, 255, 0.8)' },
+            (() => ({
+              '&:hover': {
+                'background-color': 'rgba(0, 0, 0, 0.3)',
+              },
+            })),
+          ]}
+          aria-label={`info about ${title}`}
+        >
+          <CallMadeIcon />
+        </IconButton>
+      )}
     />
   </ImageListItem>
 );
