@@ -1,5 +1,5 @@
 /* eslint-disable default-param-last */
-import actionTypes from '../Actions/actionTypes';
+import actionTypes from '../actions/actionTypes';
 
 const {
   GET_ALL_ADS,
@@ -13,7 +13,7 @@ const adsReducer = (state = initialState, { type, payload }) => {
 
   switch (type) {
     case GET_ALL_ADS:
-      result.all = payload;
+      result.all = payload || [];
       break;
 
     case GET_AD:
