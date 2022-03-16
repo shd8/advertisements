@@ -2,10 +2,9 @@
 import React from 'react';
 import { ImageList } from '@mui/material';
 import AdListElement from '../AdListElement';
-import './styles.scss';
 
 const AdList = ({ ads = [] }) => (
-  <ImageList className="ad-list" variant="masonry" cols={3} gap={10}>
+  <ImageList className="ad-list" variant="masonry" cols={2} gap={10}>
     { ads.length > 0 && ads.map(({
       id,
       image,
