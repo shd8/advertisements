@@ -12,7 +12,7 @@ const AdListElement = ({
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <ImageListItem>
+    <ImageListItem sx={{ display: 'flex' }}>
       {!imageLoaded && <CircularProgress />}
       <img
         src={image}

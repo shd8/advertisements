@@ -4,7 +4,13 @@ import { ImageList } from '@mui/material';
 import AdListElement from '../AdListElement';
 
 const AdList = ({ ads = [] }) => (
-  <ImageList className="ad-list" variant="masonry" cols={2} gap={10}>
+  <ImageList
+    className="ad-list"
+    variant="masonry"
+    cols={2}
+    gap={10}
+    sx={{ margin: '0em 2em' }}
+  >
     { ads.length > 0 && ads.map(({
       id,
       image,

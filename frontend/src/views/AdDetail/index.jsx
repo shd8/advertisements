@@ -25,6 +25,15 @@ const AdDetail = () => {
           : (
             <>
               <h1>{currentAd.title}</h1>
+              {!imageLoaded && <CircularProgress size={75} className="dashboard__loading" />}
+              <img
+                src={currentAd.image}
+                alt={currentAd.description}
+                srcSet=""
+                loading="lazy"
+                className="detail__image"
+                onLoad={() => setImageLoaded(true)}
+              />
               <p>
                 Current ad price:
                 {currentAd.price}
@@ -59,15 +68,6 @@ const AdDetail = () => {
                 {' '}
                 {timestampToDate(currentAd.valid_until)}
               </p>
-              {!imageLoaded
-              && <CircularProgress size={75} className="dashboard__loading" />}
-              <img
-                src={currentAd.image}
-                alt={currentAd.description}
-                srcSet=""
-                loading="lazy"
-                onLoad={() => setImageLoaded(true)}
-              />
             </>
           )
       }
