@@ -16,7 +16,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <h1>Dashboard</h1>
+      <h1>Advertisements</h1>
       {
         loading
           ? <CircularProgress size={75} className="dashboard__loading" />
