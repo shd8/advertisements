@@ -6,9 +6,31 @@
     &__loading {
         margin: 20em 0em;
     }
+}
+
+.details {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0em 2em;
+
+    &__product {
+        max-width: 80vmin;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     &__image {
         max-width: 80%;
+    }
+
+    &__description {
+        min-width: 50vmin;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
