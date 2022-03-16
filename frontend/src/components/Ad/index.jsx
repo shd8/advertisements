@@ -2,6 +2,7 @@
 import React from 'react';
 import { IconButton, ImageListItem, ImageListItemBar } from '@mui/material';
 import CallMadeIcon from '@mui/icons-material/CallMade';
+import timestampToDate from '../../utils/time';
 
 const Ad = ({
   id,
@@ -24,14 +25,14 @@ const Ad = ({
     <ImageListItemBar
       title={title}
       sx={{ background: 'rgba(0, 0, 0, 0.65)' }}
-      subtitle={`Valid until: ${validUntil}`}
+      subtitle={`Valid until: ${timestampToDate(validUntil)}`}
       actionIcon={(
         <IconButton
           sx={[
             { color: 'rgba(255, 255, 255, 0.8)' },
             (() => ({
               '&:hover': {
-                'background-color': 'rgba(0, 0, 0, 0.3)',
+                backgroundColor: 'rgba(0, 0, 0, 0.3)',
               },
             })),
           ]}
