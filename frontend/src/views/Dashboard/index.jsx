@@ -11,7 +11,7 @@ const Dashboard = () => {
   const loading = ads.length === 0;
 
   useEffect(() => {
-    dispatch(getAllAds());
+    setTimeout(() => dispatch(getAllAds()), 1000);
   }, []);
 
   return (

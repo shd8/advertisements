@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import { ImageList } from '@mui/material';
-import Ad from '../Ad';
+import AdListElement from '../AdListElement';
 import './styles.scss';
 
 const AdList = ({ ads = [] }) => (
@@ -9,24 +9,16 @@ const AdList = ({ ads = [] }) => (
     { ads.length > 0 && ads.map(({
       id,
       image,
-      external,
-      rating,
       title,
-      description,
-      price,
-      category,
       valid_until,
+      description,
     }) => (
-      <Ad
+      <AdListElement
         key={id}
         id={id}
-        image={image}
-        external={external}
-        rating={rating}
         title={title}
         description={description}
-        price={price}
-        category={category}
+        image={image}
         validUntil={valid_until}
       />
     ))}
