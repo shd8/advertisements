@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import { StyledEngineProvider } from '@mui/material';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import configureStore from './redux/store/configureStore';
@@ -13,7 +14,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <App />
+        <StyledEngineProvider>
+          <App />
+        </StyledEngineProvider>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,

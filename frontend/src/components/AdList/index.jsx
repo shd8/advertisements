@@ -1,10 +1,12 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable import/extensions */
 import React from 'react';
-import { ImageListItem, ImageList } from '@mui/material';
+import { ImageList } from '@mui/material';
 import Ad from '../Ad';
+import './styles.scss';
 
 const AdList = ({ ads = [] }) => (
-  <ImageList variant="woven" cols={3} gap={8}>
+  <ImageList className="ad-list" variant="masonry" cols={3} gap={10}>
     { ads.length > 0 && ads.map(({
       id,
       image,
@@ -16,19 +18,18 @@ const AdList = ({ ads = [] }) => (
       category,
       validUntil,
     }) => (
-      <ImageListItem key={id}>
-        <Ad
-          id={id}
-          image={image}
-          external={external}
-          rating={rating}
-          title={title}
-          description={description}
-          price={price}
-          category={category}
-          validUntil={validUntil}
-        />
-      </ImageListItem>
+      <Ad
+        key={id}
+        id={id}
+        image={image}
+        external={external}
+        rating={rating}
+        title={title}
+        description={description}
+        price={price}
+        category={category}
+        validUntil={validUntil}
+      />
     ))}
   </ImageList>
 );

@@ -5,14 +5,14 @@ import { getAllAds } from '../../redux/actions/actions';
 
 const Dashboard = () => {
   const dispatch = useDispatch();
-  const ads = useSelector((state) => state.ads);
+  const ads = useSelector((state) => state.ads.all);
 
   useEffect(() => {
     dispatch(getAllAds());
   }, []);
 
   return (
-    <div>
+    <div className="dashboard">
       <h1>Dashboard</h1>
       <AdList ads={ads} />
     </div>
