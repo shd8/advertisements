@@ -46,11 +46,10 @@ const AdDetail = () => {
           : (
             <>
               <div className="details__header">
-                <Link to="/">
+                <Link to="/" className="details__home">
                   <IconButton
                     sx={{ color: 'rgba(0, 0, 0, 0.54)' }}
                     aria-label="Home"
-                    className="details__home"
                   >
                     <HomeIcon sx={{ fontSize: 40 }} />
                   </IconButton>
