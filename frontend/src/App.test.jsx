@@ -1,9 +1,23 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import App from './App';
+import configureStore from './redux/store/configureStore';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+const store = configureStore();
+
+const Providers = ({ children }) => (
+  <Provider store={store}>
+    <MemoryRouter>
+      {children}
+    </MemoryRouter>
+  </Provider>
+);
+
+test('Renders App dashboard', () => {
+  render(<App />, { wrapper: Providers });
+
+  const linkElement = screen.getByText(/Advertisements/i);
   expect(linkElement).toBeInTheDocument();
 });
