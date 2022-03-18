@@ -1,4 +1,4 @@
-import timestampToDate from './time';
+import { timestampToDate } from './time';
 
 describe('Given utils', () => {
   test('Should first', () => {

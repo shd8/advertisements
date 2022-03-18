@@ -4,7 +4,7 @@ import {
 } from '@mui/material';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import { Link } from 'react-router-dom';
-import timestampToDate from '../../utils/time';
+import { timestampToDate } from '../../utils/time';
 
 const AdListElement = ({
   id, image, title, description, validUntil,

@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   CircularProgress, Button, IconButton, Box, Modal, Typography,
 } from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
-import HomeIcon from '@mui/icons-material/Home';
 import Rating from '../../components/Rating';
 import { getAd, voidCurrentAd } from '../../redux/actions/actions';
-import timestampToDate from '../../utils/time';
+import { timestampToDate } from '../../utils/time';
 import './styles.scss';
+import Home from '../../components/Home';
 
 const AdDetail = () => {
   const { adId } = useParams();
@@ -46,19 +46,11 @@ const AdDetail = () => {
           : (
             <>
               <div className="details__header">
-                <Link to="/" className="details__home">
-                  <IconButton
-                    sx={{ color: 'rgba(0, 0, 0, 0.54)' }}
-                    aria-label="Home"
-                  >
-                    <HomeIcon sx={{ fontSize: 40 }} />
-                  </IconButton>
-                </Link>
+                <Home />
                 <small className="detail__category">{ currentAd.category }</small>
               </div>
               <h1>{currentAd.title}</h1>
               <div className="details">
-
                 <div className="details__product">
                   {!imageLoaded && <CircularProgress size={75} className="dashboard__loading" />}
                   <img
@@ -71,10 +63,10 @@ const AdDetail = () => {
                   />
                   <div className="details__quality-price">
                     <Rating rating={currentAd.rating} />
-                    <p className="details__price">
+                    <span className="details__price">
                       $
                       {currentAd.price}
-                    </p>
+                    </span>
                   </div>
 
                 </div>
@@ -90,7 +82,7 @@ const AdDetail = () => {
                     { currentAd.description}
                   </p>
                   <div className="details__actions">
-                    <Button color="primary" onClick={toggleModal}>Purchase</Button>
+                    <Button variant="contained" color="primary" onClick={toggleModal}>Purchase</Button>
                     <Modal
                       open={openModal}
                       onClose={toggleModal}
@@ -98,9 +90,7 @@ const AdDetail = () => {
                       aria-describedby="modal-modal-description"
                     >
                       <Box sx={style}>
-                        <Typography id="modal-modal-title" variant="h6" component="h2">
-                          You did it!
-                        </Typography>
+                        <Typography id="modal-modal-title" variant="h6" component="h2">You did it!</Typography>
                         <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                           Now
                           {' '}
@@ -113,6 +103,9 @@ const AdDetail = () => {
                     <IconButton
                       sx={{ color: 'rgba(0, 0, 0, 0.54)' }}
                       aria-label="External info"
+                      href={currentAd.external || ''}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <InfoIcon />
                     </IconButton>

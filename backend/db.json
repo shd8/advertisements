@@ -1,114 +1,293 @@
 {
-    "ads": [
-        {
-            "id": 0,
-            "image": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/food-delivery-advertisement-design-template-cfd149289a4f241f8bbde6277ac6960c_screen.jpg?ts=1622237544",
-            "external": "url",
-            "rating": 6,
-            "title": "Hamburguer",
-            "description": "Eat hamburguer",
-            "price": 2.99,
-            "category": "food",
-            "valid_until": 1655313178
-        },
-        {
-            "id": 1,
-            "image": "https://m.media-amazon.com/images/I/71WMHPfSinL._AC_SX425_.jpg",
-            "rating": 7,
-            "external": "",
-            "title": "Coca cola",
-            "description": "Drink coca cola",
-            "price": 6.99,
-            "category": "food",
-            "valid_until": 1655313178
-        },
-        {
-            "id": 2,
-            "image": "https://literacyideas.com/wp-content/uploads/2021/08/1_img_6107cb72d2d9b.jpg",
-            "rating": 8,
-            "external": "",
-            "title": "Diet coke",
-            "description": "Drink diet coke",
-            "price": 9.99,
-            "category": "food",
-            "valid_until": 1655313178
-        },
-        {
-            "id": 3,
-            "image": "https://gurulocity.com/wp-content/uploads/2016/10/2016-Colgate-Print-Advertisement-Featured-Image.jpg",
-            "rating": 9,
-            "external": "",
-            "title": "Colgate",
-            "description": "Smile your strength",
-            "price": 13.99,
-            "category": "health",
-            "valid_until": 1655313178
-        },
-        {
-            "id": 4,
-            "image": "https://cdn5.vectorstock.com/i/1000x1000/03/49/strawberry-ice-cream-advertisement-vector-21520349.jpg",
-            "rating": 9,
-            "external": "",
-            "title": "Ice cream",
-            "description": "Eat ice cream",
-            "price": 6.99,
-            "category": "food",
-            "valid_until": 1655313178
-        },
-        {
-            "id": 5,
-            "image": "https://media.baamboozle.com/uploads/images/426474/1634178204_38741_url.jpeg",
-            "rating": 10,
-            "external": "",
-            "title": "Snikkers",
-            "description": "Eat snikkers",
-            "price": 2.99,
-            "category": "food",
-            "valid_until": 1655313178
-        },
-        {
-            "id": 6,
-            "image": "https://149350408.v2.pressablecdn.com/wp-content/uploads/2017/06/doug-zuba-98852.jpg",
-            "rating": 5,
-            "external": "",
-            "title": "Nike",
-            "description": "Wear Nike",
-            "price": 39.99,
-            "category": "clothing",
-            "valid_until": 1655313178
-        },
-        {
-            "id": 7,
-            "image": "https://www.delcampe.net/static/img_large/auction/000/314/224/867_001.jpg?v=1",
-            "rating": 9,
-            "external": "",
-            "title": "Pantene",
-            "description": "Strength your hair",
-            "price": 9.99,
-            "category": "health",
-            "valid_until": 1655313178
-        },
-        {
-            "id": 8,
-            "image": "https://cdn.dribbble.com/users/2688334/screenshots/6636843/be707f81337547.5cfcdfc44087b.jpg",
-            "rating": 4,
-            "external": "",
-            "title": "Honda or Big Mac",
-            "description": "Buy a Honda or a Big Mac",
-            "price": 19999.99,
-            "category": ["cars", "food"],
-            "valid_until": 1655313178
-        },
-        {
-            "id": 9,
-            "image": "https://i.pinimg.com/originals/dc/bc/f1/dcbcf10bba0535c17e6cb8c3a9dd32fb.jpg",
-            "rating": 10,
-            "external": "",
-            "title": "A is for Apple",
-            "description": "Buy a M1 chip",
-            "price": 1999.99,
-            "category": "technology",
-            "valid_until": 1655313178
-        }
-    ]
+  "ads": [
+    {
+      "id": 0,
+      "image": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/food-delivery-advertisement-design-template-cfd149289a4f241f8bbde6277ac6960c_screen.jpg?ts=1622237544",
+      "external": "https://www.burgerking.es/home",
+      "rating": 6,
+      "title": "Hamburguer",
+      "description": "Eat hamburguer",
+      "price": 2.99,
+      "category": "food",
+      "valid_until": 1655313178000
+    },
+    {
+      "id": 1,
+      "image": "https://m.media-amazon.com/images/I/71WMHPfSinL._AC_SX425_.jpg",
+      "rating": 7,
+      "external": "https://www.cocacola.es/",
+      "title": "Coca cola",
+      "description": "Drink coca cola",
+      "price": 6.99,
+      "category": "food",
+      "valid_until": 1655313178000
+    },
+    {
+      "id": 2,
+      "image": "https://literacyideas.com/wp-content/uploads/2021/08/1_img_6107cb72d2d9b.jpg",
+      "rating": 8,
+      "external": "https://www.cocacola.es/",
+      "title": "Diet coke",
+      "description": "Drink diet coke",
+      "price": 9.99,
+      "category": "food",
+      "valid_until": 1655313178000
+    },
+    {
+      "id": 3,
+      "image": "https://gurulocity.com/wp-content/uploads/2016/10/2016-Colgate-Print-Advertisement-Featured-Image.jpg",
+      "rating": 9,
+      "external": "https://www.colgate.es/?gclid=Cj0KCQjw29CRBhCUARIsAOboZbKIUkdhtctfpkfIdrh5mVTk1CqM2aIWhsXnd_ZLLaTWY4pR11tfOk0aAvzLEALw_wcB&gclsrc=aw.ds",
+      "title": "Colgate",
+      "description": "Smile your strength",
+      "price": 13.99,
+      "category": "health",
+      "valid_until": 1655313178000
+    },
+    {
+      "id": 4,
+      "image": "https://cdn5.vectorstock.com/i/1000x1000/03/49/strawberry-ice-cream-advertisement-vector-21520349.jpg",
+      "rating": 9,
+      "external": "https://helados.nestle.es/nuestras-marcas/maxibon",
+      "title": "Ice cream",
+      "description": "Eat ice cream",
+      "price": 6.99,
+      "category": "food",
+      "valid_until": 1655313178000
+    },
+    {
+      "id": 5,
+      "image": "https://media.baamboozle.com/uploads/images/426474/1634178204_38741_url.jpeg",
+      "rating": 10,
+      "external": "https://www.amazon.es/snickers-chocolate/s?k=snickers+chocolate",
+      "title": "Snikkers",
+      "description": "Eat snikkers",
+      "price": 2.99,
+      "category": "food",
+      "valid_until": 1655313178000
+    },
+    {
+      "id": 6,
+      "image": "https://149350408.v2.pressablecdn.com/wp-content/uploads/2017/06/doug-zuba-98852.jpg",
+      "rating": 5,
+      "external": "https://www.nike.com/es/?cp=40840846946_search_%7Cnike%7C10575086094%7C103687421719%7Ce%7Cc%7CES%7Cpure%7C452199484489&gclsrc=aw.ds&ds_rl=1252249&gclid=Cj0KCQjw29CRBhCUARIsAOboZbJ11p5nbdBei-s-LVTndjJ6I8qsCOP1MqXhknajtoeae_uggRIxBSQaAq4FEALw_wcB",
+      "title": "Nike",
+      "description": "Wear Nike",
+      "price": 39.99,
+      "category": "clothing",
+      "valid_until": 1655313178000
+    },
+    {
+      "id": 7,
+      "image": "https://www.delcampe.net/static/img_large/auction/000/314/224/867_001.jpg?v=1",
+      "rating": 9,
+      "external": "https://pantene.es/es-es",
+      "title": "Pantene",
+      "description": "Strength your hair",
+      "price": 9.99,
+      "category": "health",
+      "valid_until": 1655313178000
+    },
+    {
+      "id": 8,
+      "image": "https://cdn.dribbble.com/users/2688334/screenshots/6636843/be707f81337547.5cfcdfc44087b.jpg",
+      "rating": 4,
+      "external": "https://www.honda.es/",
+      "title": "Honda or Big Mac",
+      "description": "Buy a Honda or a Big Mac",
+      "price": 19999.99,
+      "category": [
+        "cars",
+        "food"
+      ],
+      "valid_until": 1655313178000
+    },
+    {
+      "id": 9,
+      "image": "https://i.pinimg.com/originals/dc/bc/f1/dcbcf10bba0535c17e6cb8c3a9dd32fb.jpg",
+      "rating": 10,
+      "external": "https://www.apple.com/es/",
+      "title": "A is for Apple",
+      "description": "Buy a M1 chip",
+      "price": 1999.99,
+      "category": "technology",
+      "valid_until": 1655313178000
+    },
+    {
+      "id": 10,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "3",
+      "category": "cars",
+      "valid_until": 1648764000000
+    },
+    {
+      "id": 999,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "234",
+      "category": "food",
+      "valid_until": 1647644400000
+    },
+    {
+      "id": 1000,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "345",
+      "category": "food",
+      "valid_until": 1649541600000
+    },
+    {
+      "id": 1001,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "542",
+      "category": "cars",
+      "valid_until": 1648850400000
+    },
+    {
+      "id": 1002,
+      "image": "b",
+      "external": "b",
+      "rating": 5,
+      "title": "b",
+      "description": "b",
+      "price": "98798",
+      "category": "food",
+      "valid_until": 1648764000000
+    },
+    {
+      "id": 1003,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "4",
+      "category": "cars",
+      "valid_until": 1649455200000
+    },
+    {
+      "id": 1004,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "45",
+      "category": "cars",
+      "valid_until": 1648850400000
+    },
+    {
+      "id": 1005,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "5",
+      "category": "cars",
+      "valid_until": 1649368800000
+    },
+    {
+      "id": 1006,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "4",
+      "category": "technology",
+      "valid_until": 1648162800000
+    },
+    {
+      "id": 1007,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "4",
+      "category": "technology",
+      "valid_until": 1648162800000
+    },
+    {
+      "id": 1008,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "4",
+      "category": "technology",
+      "valid_until": 1648162800000
+    },
+    {
+      "id": 1009,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "4",
+      "category": "technology",
+      "valid_until": 1648162800000
+    },
+    {
+      "id": 1010,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "4",
+      "category": "technology",
+      "valid_until": 1648162800000
+    },
+    {
+      "id": 1011,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "4",
+      "category": "technology",
+      "valid_until": 1648162800000
+    },
+    {
+      "id": 1012,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "4",
+      "category": "technology",
+      "valid_until": 1648162800000
+    },
+    {
+      "id": 1013,
+      "image": "a",
+      "external": "a",
+      "rating": 5,
+      "title": "a",
+      "description": "a",
+      "price": "4",
+      "category": "technology",
+      "valid_until": 1648162800000
+    }
+  ]
 }
