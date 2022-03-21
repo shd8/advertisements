@@ -27,4 +27,18 @@ describe('Given and Ads Reducer', () => {
         },
       });
   });
+
+  test('When DELETE_AD, should delete the given ad', () => {
+    expect(adsReducer({
+      all: [{
+        id: 1,
+      }],
+      currentAd: 'ad',
+    }, { type: 'DELETE_AD', payload: 1 }))
+      .toEqual({ all: [], currentAd: {} });
+  });
+
+  test('When UPDATE_SEARCH_STRING, should update search string', () => {
+    expect(adsReducer({ searchString: 'ab' }, { type: 'UPDATE_SEARCH_STRING', payload: 'cd' })).toEqual({ searchString: 'cd' });
+  });
 });
