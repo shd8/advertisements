@@ -1,24 +1,36 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   CircularProgress, Button, IconButton, Box, Modal, Typography,
 } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
 import InfoIcon from '@mui/icons-material/Info';
 import Rating from '../../components/Rating';
-import { getAd, voidCurrentAd } from '../../redux/actions/actions';
+import { getAd, voidCurrentAd, deleteAd } from '../../redux/actions/actions';
 import { timestampToDate } from '../../utils/time';
 import './styles.scss';
 
 const AdDetail = () => {
   const { adId } = useParams();
+
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
   const currentAd = useSelector((state) => state.ads.currentAd);
   const loading = Object.keys(currentAd).length === 0;
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
+  const [openPurchaseModal, setOpenPurchaseModal] = useState(false);
+  const [openDeleteModal, setOpenDeleteModal] = useState(false);
 
-  const toggleModal = () => setOpenModal(!openModal);
+  const togglePurchaseModal = () => setOpenPurchaseModal(!openPurchaseModal);
+  const toggleDeleteModal = () => setOpenDeleteModal(!openDeleteModal);
+
+  const handleDeleteAd = () => {
+    dispatch(deleteAd(adId));
+    navigate('/');
+  };
 
   useEffect(() => {
     dispatch(voidCurrentAd());
@@ -45,7 +57,13 @@ const AdDetail = () => {
           : (
             <>
               <div className="details__header">
-                <small className="detail__category">{ currentAd.category }</small>
+                <small className="detail__category">
+                  {
+                  Array.isArray(currentAd.category)
+                    ? currentAd.category.map((oneCategory, index) => (index === currentAd.category.length - 1 ? oneCategory : `${oneCategory}, `))
+                    : currentAd.category
+                  }
+                </small>
               </div>
               <h1>{currentAd.title}</h1>
               <div className="details">
@@ -79,11 +97,20 @@ const AdDetail = () => {
                     {' '}
                     { currentAd.description}
                   </p>
+                  <IconButton
+                    sx={{ color: 'rgba(0, 0, 0, 0.54)' }}
+                    aria-label="External info"
+                    href={currentAd.external || ''}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <InfoIcon sx={{ fontSize: '1.5em' }} />
+                  </IconButton>
                   <div className="details__actions">
-                    <Button variant="contained" color="primary" onClick={toggleModal}>Purchase</Button>
+                    <Button variant="contained" color="primary" onClick={togglePurchaseModal}>Purchase</Button>
                     <Modal
-                      open={openModal}
-                      onClose={toggleModal}
+                      open={openPurchaseModal}
+                      onClose={() => setOpenPurchaseModal(false)}
                       aria-labelledby="modal-modal-title"
                       aria-describedby="modal-modal-description"
                     >
@@ -98,15 +125,30 @@ const AdDetail = () => {
                         </Typography>
                       </Box>
                     </Modal>
-                    <IconButton
-                      sx={{ color: 'rgba(0, 0, 0, 0.54)' }}
-                      aria-label="External info"
-                      href={currentAd.external || ''}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Button sx={{ marginLeft: '1em' }} variant="outlined" color="error" onClick={toggleDeleteModal}>
+                      <DeleteIcon />
+                      Delete
+                    </Button>
+                    <Modal
+                      open={openDeleteModal}
+                      onClose={() => setOpenDeleteModal(false)}
+                      aria-labelledby="modal-modal-title"
+                      aria-describedby="modal-modal-description"
                     >
-                      <InfoIcon />
-                    </IconButton>
+                      <Box sx={style}>
+                        <Typography id="modal-modal-title" variant="h6" component="h2">WARNING</Typography>
+                        <Typography id="modal-modal-description" sx={{ mt: 2, marginBottom: '2em' }}>
+                          Are you sure you want to delete
+                          {' '}
+                          {currentAd.title}
+                          ?
+                        </Typography>
+                        <div>
+                          <Button onClick={handleDeleteAd} variant="contained">Yes</Button>
+                          <Button onClick={() => setOpenDeleteModal(false)} variant="text">No</Button>
+                        </div>
+                      </Box>
+                    </Modal>
                   </div>
                 </div>
               </div>

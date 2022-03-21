@@ -6,6 +6,7 @@ const {
   GET_AD,
   VOID_CURRENT_AD,
   ADD_AD,
+  DELETE_AD,
 } = actionTypes;
 
 const initialState = { all: [], currentAd: {} };
@@ -28,6 +29,11 @@ const adsReducer = (state = initialState, { type, payload }) => {
 
     case ADD_AD:
       result.all = { ...result.all, ...payload };
+      break;
+
+    case DELETE_AD:
+      result.currentAd = {};
+      result.all = result.all.filter((ad) => ad.id !== Number(payload));
       break;
 
     default:

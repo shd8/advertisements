@@ -11,6 +11,8 @@
 4. npm start
 5. You should see Server started at port: 4040. Don't close this terminal
 
+Additional notes: Note that at Dashboard and AdDetail components, an intented delay of 1 second while fetching the data was added in order to simulate real Database delay behavior.
+
 ### Raise the frontend
 1. cd frontend
 2. npm install

@@ -2,7 +2,7 @@ import axios from 'axios';
 import actionTypes from './actionTypes';
 
 const {
-  GET_ALL_ADS, GET_AD, VOID_CURRENT_AD, ADD_AD,
+  GET_ALL_ADS, GET_AD, VOID_CURRENT_AD, ADD_AD, DELETE_AD,
 } = actionTypes;
 const { REACT_APP_API_URL } = process.env;
 
@@ -35,3 +35,13 @@ export const addAd = (newAd) => async (dispatch) => {
 export const voidCurrentAd = () => ({
   type: VOID_CURRENT_AD,
 });
+
+export const deleteAd = (adId) => async (dispatch) => {
+  const { status } = await axios.delete(`${REACT_APP_API_URL}/ads/${adId}`);
+  if (status === 200) {
+    dispatch({
+      type: DELETE_AD,
+      payload: adId,
+    });
+  }
+};
