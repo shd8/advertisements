@@ -1,0 +1,9 @@
+.new-add-form {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4em;
+
+    &__field {
+        min-width: 50vmin;
+    }
+}
