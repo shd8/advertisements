@@ -8,6 +8,7 @@ import './styles.scss';
 const Dashboard = () => {
   const dispatch = useDispatch();
   const ads = useSelector((state) => state.ads.all);
+  const searchString = useSelector((state) => state.ads.searchString);
   const loading = ads.length === 0;
 
   useEffect(() => {
@@ -20,7 +21,17 @@ const Dashboard = () => {
       {
         loading
           ? <CircularProgress size={75} className="dashboard__loading" />
-          : <AdList ads={ads} />
+          : (
+            <AdList ads={
+            searchString !== ''
+              ? ads.filter(
+                (ad) => ad.title.toLowerCase().includes(searchString.toLowerCase())
+                || ad.description.toLowerCase().includes(searchString.toLowerCase()),
+              )
+              : ads
+          }
+            />
+          )
       }
     </div>
   );

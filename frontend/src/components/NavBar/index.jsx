@@ -29,13 +29,8 @@ const NavBar = () => {
               onChange={(event) => dispatch(updateSearchString(event.target.value))}
               inputProps={{ 'aria-label': 'search google maps' }}
             />
-            <IconButton
-              type="button"
-              sx={{ p: '10px' }}
-              aria-label="search"
-            >
-              <SearchIcon />
-            </IconButton>
+
+            <SearchIcon sx={{ p: '10px' }} />
           </Paper>
           <Link to="new">
             <IconButton sx={{ color: 'rgba(0, 0, 0, 0.54)' }}>
