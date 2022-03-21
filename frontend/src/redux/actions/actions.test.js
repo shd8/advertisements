@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {
-  voidCurrentAd, getAllAds, getAd, addAd,
+  voidCurrentAd, getAllAds, getAd, addAd, deleteAd, updateSearchString,
 } from './actions';
 
 jest.mock('axios');
@@ -53,12 +53,28 @@ describe('Given an action creator', () => {
     });
   });
 
-  test('Should throw error when add is not added', async () => {
+  test('Should not call the dispatcher when ad is not added', async () => {
     const dispatch = jest.fn();
     const data = { id: 3, a: 'b', b: 'b' };
 
     axios.post.mockResolvedValue({ status: 500 });
     await addAd(data)(dispatch);
     expect(dispatch).not.toHaveBeenCalled();
+  });
+
+  test('Should dispatch a delete add action', async () => {
+    const dispatch = jest.fn();
+    const data = { id: 3, a: 'b', b: 'b' };
+
+    axios.delete.mockResolvedValue({ status: 200 });
+    await deleteAd(data)(dispatch);
+
+    expect(dispatch).toHaveBeenCalled();
+  });
+
+  test('Should return a search string action creator', () => {
+    const result = updateSearchString('ab');
+
+    expect(result).toEqual({ type: 'UPDATE_SEARCH_STRING', payload: 'ab' });
   });
 });
