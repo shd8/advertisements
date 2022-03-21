@@ -11,14 +11,14 @@
 4. npm start
 5. You should see Server started at port: 4040. Don't close this terminal
 
-Additional notes: Note that at Dashboard and AdDetail components, an intented delay of 1 second while fetching the data was added in order to simulate real Database delay behavior.
-
 ### Raise the frontend
 1. cd frontend
 2. npm install
 3. npm start
 5. Acess http://localhost:3000/
 6. With the backend up, you should see the Dashboard with the title "Advertisements"
+
+Additional notes: Note that at Dashboard and AdDetail components, an intented delay of 1 second while fetching the data was added in order to simulate real Database delay behavior.
 
 ### Run the tests
 1. cd frontend
