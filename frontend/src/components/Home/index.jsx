@@ -9,7 +9,7 @@ const Home = () => (
       sx={{ color: 'rgba(0, 0, 0, 0.54)' }}
       aria-label="Home"
     >
-      <HomeIcon sx={{ fontSize: 40 }} />
+      <HomeIcon sx={{ fontSize: 40, color: 'white' }} />
     </IconButton>
   </Link>
 );

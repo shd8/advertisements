@@ -2,7 +2,7 @@ import axios from 'axios';
 import actionTypes from './actionTypes';
 
 const {
-  GET_ALL_ADS, GET_AD, VOID_CURRENT_AD, ADD_AD, DELETE_AD,
+  GET_ALL_ADS, GET_AD, VOID_CURRENT_AD, ADD_AD, DELETE_AD, UPDATE_SEARCH_STRING,
 } = actionTypes;
 const { REACT_APP_API_URL } = process.env;
 
@@ -45,3 +45,8 @@ export const deleteAd = (adId) => async (dispatch) => {
     });
   }
 };
+
+export const updateSearchString = (payload) => ({
+  type: UPDATE_SEARCH_STRING,
+  payload,
+});

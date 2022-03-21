@@ -7,9 +7,10 @@ const {
   VOID_CURRENT_AD,
   ADD_AD,
   DELETE_AD,
+  UPDATE_SEARCH_STRING,
 } = actionTypes;
 
-const initialState = { all: [], currentAd: {} };
+const initialState = { all: [], currentAd: {}, searchString: '' };
 
 const adsReducer = (state = initialState, { type, payload }) => {
   const result = { ...state };
@@ -34,6 +35,10 @@ const adsReducer = (state = initialState, { type, payload }) => {
     case DELETE_AD:
       result.currentAd = {};
       result.all = result.all.filter((ad) => ad.id !== Number(payload));
+      break;
+
+    case UPDATE_SEARCH_STRING:
+      result.searchString = payload;
       break;
 
     default:
