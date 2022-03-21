@@ -59,28 +59,32 @@ const AddAd = () => {
 
       <FormControl>
         <TextField
+          margin="normal"
           required
           label="Image URL"
           id="outlined-disabled"
           onChange={({ target }) => setImageUrl(target?.value)}
         />
         <TextField
+          margin="normal"
           required
           label="External Link"
           id="outlined-disabled"
           onChange={({ target }) => setExternalUrl(target?.value)}
         />
         <TextField
+          margin="normal"
           required
           label="Title"
           id="outlined-disabled"
           onChange={({ target }) => setTitle(target?.value)}
         />
         <TextField
+          margin="normal"
           required
           label="Description"
           multiline
-          maxRows={4}
+          rows={4}
           id="outlined-disabled"
           onChange={({ target }) => setDescription(target?.value)}
         />
@@ -94,6 +98,7 @@ const AddAd = () => {
           onChange={({ target }) => setRating(target?.value > 0 ? Number(target.value) : 1)}
         />
         <TextField
+          margin="normal"
           type="number"
           required
           label="Price in $US"
@@ -116,6 +121,7 @@ const AddAd = () => {
         </RadioGroup>
 
         <TextField
+          margin="normal"
           required
           id="date"
           label="Valid until"

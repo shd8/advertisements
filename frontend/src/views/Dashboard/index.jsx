@@ -4,7 +4,6 @@ import { CircularProgress } from '@mui/material';
 import AdList from '../../components/AdList';
 import { getAllAds } from '../../redux/actions/actions';
 import './styles.scss';
-import Home from '../../components/Home';
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -17,7 +16,6 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <Home />
       <h1>Advertisements</h1>
       {
         loading

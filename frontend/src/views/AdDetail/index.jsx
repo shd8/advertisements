@@ -9,7 +9,6 @@ import Rating from '../../components/Rating';
 import { getAd, voidCurrentAd } from '../../redux/actions/actions';
 import { timestampToDate } from '../../utils/time';
 import './styles.scss';
-import Home from '../../components/Home';
 
 const AdDetail = () => {
   const { adId } = useParams();
@@ -46,7 +45,6 @@ const AdDetail = () => {
           : (
             <>
               <div className="details__header">
-                <Home />
                 <small className="detail__category">{ currentAd.category }</small>
               </div>
               <h1>{currentAd.title}</h1>
