@@ -27,7 +27,7 @@ const adsReducer = (state = initialState, { type, payload }) => {
       break;
 
     case ADD_AD:
-      result.all = { ...result.all, payload };
+      result.all = { ...result.all, ...payload };
       break;
 
     default:
