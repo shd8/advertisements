@@ -18,6 +18,6 @@ const Providers = ({ children }) => (
 test('Renders App dashboard', () => {
   render(<App />, { wrapper: Providers });
 
-  const linkElement = screen.getByText(/Advertisements/i);
-  expect(linkElement).toBeInTheDocument();
+  const title = screen.getByText(/Advertisements/i);
+  expect(title).toBeInTheDocument();
 });

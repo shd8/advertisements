@@ -73,12 +73,14 @@ const AddAd = () => {
             required
             label="External Link"
             id="outlined-disabled"
+            name="external-url"
             onChange={({ target }) => setExternalUrl(target?.value)}
           />
           <TextField
             margin="normal"
             required
             label="Title"
+            name="title"
             id="outlined-disabled"
             onChange={({ target }) => setTitle(target?.value)}
           />
@@ -87,6 +89,7 @@ const AddAd = () => {
             required
             label="Description"
             multiline
+            name="description"
             rows={4}
             id="outlined-disabled"
             onChange={({ target }) => setDescription(target?.value)}
