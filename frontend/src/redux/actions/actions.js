@@ -29,8 +29,6 @@ export const addAd = (newAd) => async (dispatch) => {
       type: ADD_AD,
       payload: newAd,
     });
-  } else {
-    throw Error(`Ad ${newAd.id} not added`);
   }
 };
 
