@@ -2,7 +2,7 @@
 
 ## Steps to use the app
 
-1. git clone https://github.com/shd8/the-right-way.git
+1. git clone https://github.com/shd8/advertisements.git
 
 ### Raise the backend
 1. cd backend
