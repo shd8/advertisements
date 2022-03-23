@@ -7,7 +7,7 @@
 ### Raise the backend
 1. cd backend
 2. npm install
-3. (Optional) Create .env file in backend folder following the pattern of .env.example.
+3. Create .env file in backend folder following the pattern of .env.example.
 4. npm start
 5. You should see Server started at port: 4040. Don't close this terminal
 
